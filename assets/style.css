@@ -1,0 +1,955 @@
+body {
+  font-weight: 700;
+  list-style: none;
+}
+
+/* .loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+  background: #FFF;
+  box-sizing: border-box;
+  animation: zeroRotation 1s ease infinite alternate-reverse;
+} */
+
+/* @keyframes zeroRotation {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(0) rotate(360deg);
+  }
+} */
+
+.navbar-brand img {
+  width: 100px;
+}
+ul li a {
+  text-align: center;
+}
+.wrapper {
+  display: inline-flex;
+}
+.wrapper .icon {
+  margin: 0 20px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span {
+  display: block;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span i {
+  line-height: 40px;
+  font-size: 15px;
+}
+.wrapper .icon .tooltip {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 10px;
+  font-weight: 300;
+  border-radius: 25px;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover .tooltip {
+  top: -40px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.icon .tooltip:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #fff;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%) rotate(45deg);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon:hover span {
+  color: #fff;
+}
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip:before {
+  background: #3b5999;
+}
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip:before {
+  background: #46c1f6;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip:before {
+  background: #e1306c;
+}
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip:before {
+  background: #333;
+}
+
+i {
+  color: rgb(207, 79, 100);
+}
+
+.container {
+  margin: auto;
+}
+
+.header {
+  width: 100%;
+  height: 75vh;
+  background: url("./image/c1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#anaSayfaLink.active,
+#katalogLink.active {
+  border-bottom: 2px solid palevioletred; /* Renk ve stil tercihlerine göre değiştir */
+}
+
+.header h1 {
+  font-size: 50px;
+  font-family: "Great Vibes", cursive;
+  color: palevioletred;
+  text-shadow: 3px 3px 5px rgb(16, 235, 16);
+}
+.header h2 {
+  font-size: 26px;
+  color: black;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-shadow: 3px 3px 5px rgba(0, 128, 0, 1);
+}
+.header p {
+  font-size: 14px;
+  font-weight: 700;
+  color: palevioletred;
+  font-family: "ontserrat", sans-serif;
+  text-shadow: 3px 3px 5px rgb(189, 199, 189);
+}
+.btn-1 a {
+  text-decoration: none;
+}
+.btn-1 {
+  border: none;
+  outline: 0;
+  padding: 15px;
+  border: 4px solid palevioletred;
+  border-radius: 10px;
+  width: 150px;
+  background-color: transparent;
+  font-weight: bold;
+  margin: auto;
+  font-family: "Raleway", sans-serif;
+  margin-top: 25px;
+  text-shadow: 3px 3px 5px rgba(0, 128, 0, 1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btn-1:hover {
+  background-color: palevioletred;
+  border-color: white;
+}
+.btn-1:hover a {
+  color: white;
+}
+.header-text {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 80px;
+}
+/* .home ul li:first-child {
+  border-bottom: 4px solid palevioletred;
+}
+.home ul li:hover {
+  border-bottom: 4px solid palevioletred;
+} */
+.bottom-header {
+  width: 80%;
+  height: 65vh;
+  background-image: url(./image/c2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+  border: 10px solid whitesmoke;
+  border-radius: 10px;
+  margin-top: -35px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.bh-text {
+  width: 70%;
+  height: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  /* transition: ease-in-out 3s; */
+  text-shadow: 3px 3px 5px rgba(0, 128, 0, 1);
+}
+.bh-text h1 {
+  color: palevioletred;
+  font-family: "Great Vibes", cursive;
+  padding-top: 25px;
+}
+.bh-text p {
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+.bh-text button {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: palevioletred;
+  color: white;
+  border: none;
+  border: 6px solid white;
+}
+.bh-text button i {
+  color: white;
+}
+.bh-text button:hover {
+  transform: scale(1.2);
+}
+.main-text h1 {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 60px;
+  padding: 50px 0;
+  text-shadow: 3px 3px 5px rgba(0, 128, 0, 1);
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.card {
+  border: none;
+  text-align: center;
+  margin: auto;
+}
+.card img {
+  border: 1px solid palevioletred;
+  padding: 10px;
+  object-fit: cover;
+  transition: 1s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card .card-title {
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 3px 3px 5px rgba(0, 128, 0, 1);
+}
+
+.card-text {
+  font-family: "Montserrat", sans-serif;
+}
+.card-btn a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: palevioletred;
+  font-weight: bold;
+  font-size: 16px;
+}
+.card-btn {
+  border: none;
+  border-bottom: 2px solid palevioletred;
+  transition: 1s;
+  background-color: transparent;
+}
+.card:hover button {
+  border: 3px solid palevioletred;
+  transform: scale(1.09);
+}
+.card:hover img {
+  transform: scale(1.09);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.main-button button a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: bold;
+}
+.main-button button {
+  border: none;
+  padding: 15px 10px;
+  border-radius: 5px;
+  background-color: palevioletred;
+  margin-bottom: 50px;
+  border: 3px solid whitesmoke;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.main-button {
+  text-align: center;
+}
+.main-button button:hover {
+  background-color: white;
+  border: 3px solid palevioletred;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.main-button button:hover a {
+  color: palevioletred;
+  text-shadow: 3px 3px 5px rgba(0, 128, 0, 1);
+}
+.choose-text h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 30px;
+  text-shadow: 3px 3px 5px rgba(0, 128, 0, 1);
+}
+.choose {
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.choose-side {
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+}
+.c-text p {
+  color: palevioletred;
+}
+.choose-side {
+  border-bottom: 1px solid palevioletred;
+}
+.c-text h3 {
+  margin-top: 25px;
+  text-shadow: 3px 3px 5px rgba(0, 128, 0, 1);
+}
+.c-icon {
+  padding-bottom: 25px;
+}
+.map iframe {
+  width: 260px;
+  height: 260px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.map {
+  text-align: center;
+  padding: 10px;
+}
+/* 
+ */
+
+.footer {
+  width: 100%;
+  height: 55vh;
+  background-color: palevioletred;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 20px;
+  background-image: url(./image/bh3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.social-footer a i {
+  color: palevioletred;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 10px;
+  margin: 0 10px;
+}
+.social-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.contact-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 50px;
+}
+.contact-footer p {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-size: 15px;
+}
+.contact-footer i {
+  color: white;
+}
+.logo-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+.logo-footer img {
+  width: 200px;
+  border: 5px solid white;
+  border-radius: 20px;
+}
+.contact-text h3 {
+  font-size: 50px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.contact img {
+  margin-bottom: 10px;
+}
+.mini-footer {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  color: pink;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-align: center;
+  padding-top: 10px;
+  border: 1px solid pink;
+}
+.mini-footer a {
+  color: gold;
+}
+
+.haqqimizda {
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./image/bh4.jpg);
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.haqqimizda-text {
+  width: 80%;
+  height: auto;
+  background-color: white;
+  color: black;
+  margin: auto;
+  text-align: center;
+  padding: 15px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding-top: 30px;
+  padding-top: 25px;
+}
+.haqqimizda-text h4 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  margin: auto;
+  text-shadow: 3px 3px 5px rgba(128, 0, 0, 1);
+}
+.haqqimizda-text p {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.variant {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 70px;
+}
+.left-v img {
+  width: 100%;
+  border: 1px solid palevioletred;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.team {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "Montserrat", sans-serif;
+}
+.left-t {
+  width: 100%;
+}
+.left-t img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid palevioletred;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.right-t {
+  width: 100%;
+}
+.left-s img {
+  width: 100%;
+  border: 1px solid palevioletred;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+.right-s {
+  width: 100%;
+  text-align: center;
+}
+.store {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/*<-- katalog css--> */
+.category-logo {
+  font-family: "Great Vibes", cursive;
+}
+
+.search input {
+  width: 250px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  border: 2px solid palevioletred;
+  margin-bottom: 20px;
+}
+::placeholder {
+  text-align: center;
+}
+.category-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: left;
+  list-style: none;
+}
+.list ul li{
+  list-style: none;
+}
+.category {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+}
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-card {
+  width: 9rem;
+  height: 200px;
+  border: none;
+}
+.product-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+.product-card h3 {
+  font-size: 14px;
+  white-space: nowrap;
+}
+/* .list-ul li{
+  display: flex;
+  flex-direction: row-reverse;
+} */
+
+ .whatsapp-icon {
+  margin-top: 10px;
+}
+.whatsapp_float {
+  width: 40px;
+  height: 40px;
+  bottom: 20px;
+  right: 10px;
+  font-size: 22px;
+}
+.whatsapp_float {
+position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 100;
+}
+.whatsapp-icon {
+  margin-top: 16px;
+  color: white;
+}
+
+.navbar-brand {
+  width: 150px;
+}
+.navbar-brand img {
+  width: 100%;
+  margin-top: 15px;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .product-card {
+    width: 9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .navbar-text {
+    margin-left: 180px;
+  }
+  .header h1 {
+    font-size: 80px;
+  }
+  .header h2 {
+    font-size: 30px;
+  }
+  .header p {
+    font-size: 20px;
+  }
+  .btn-1 {
+    width: 250px;
+  }
+  .header-text {
+    width: 100%;
+    margin: auto;
+    padding-top: 250px;
+  }
+  .choose {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background-image: url(./image/choosebg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  .choose-side {
+    width: 40%;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    border-bottom: 1px solid palevioletred;
+    text-align: left;
+  }
+  #right {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  .map {
+    width: 40%;
+    margin-left: 7dvb;
+  }
+  .contact {
+    width: 40%;
+    height: auto;
+    margin: auto;
+  }
+  .footer {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .location {
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  .location img {
+    margin-bottom: 25px;
+  }
+  .phone {
+    width: 40%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .phone img {
+    margin-bottom: 20px;
+  }
+  .email {
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  .email img {
+    margin-bottom: 15px;
+  }
+  .contact-text {
+    margin-bottom: 80px;
+  }
+  .haqqimizda-text {
+    height: auto;
+  }
+  .haqqimizda-text h4 {
+    font-size: 40px;
+  }
+  .variant {
+    height: 50vh;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .left-v {
+    width: 40%;
+  }
+  .left-v img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid palevioletred;
+    padding: 10px;
+  }
+  .right-v {
+    width: 40%;
+  }
+  .team {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3ca0px;
+  }
+  .left-t {
+    width: 40%;
+  }
+  .left-t img {
+    width: 100%;
+  }
+  .right-t {
+    width: 40%;
+  }
+  .left-s {
+    width: 40%;
+  }
+  .left-s img {
+    width: 100%;
+  }
+  .right-s {
+    width: 40%;
+  }
+  .store {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .category-nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .list {
+    width: 30%;
+    font-family: "Montserrat", sans-serif;
+  }
+  .list ul li {
+    margin-bottom: 25px;
+  }
+  .list h4 {
+    margin-left: 30px;
+    padding-bottom: 20px;
+  }
+  .product {
+    width: 70%;
+    margin-top: 50px;
+  }
+  .category {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .product-card {
+    width: 11rem;
+  }
+  .product-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .header h1 {
+    font-size: 100px;
+  }
+  .header h2 {
+    font-size: 36px;
+  }
+  .header p {
+    font-size: 24px;
+  }
+  .btn-1 {
+    width: 280px;
+  }
+  .header-text {
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 70px;
+  }
+  .choose-side {
+    height: 150px;
+  }
+  .haqqimizda-sol {
+    width: 40%;
+    height: 400px;
+  }
+  .haqqimizda-sol img {
+    width: 100%;
+    height: 100%;
+  }
+  .haqqimizda-sag {
+    width: 40%;
+  }
+  .haqqimizda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+  }
+  .variant {
+    margin-top: 50px;
+    justify-content: space-around;
+  }
+  .product-card {
+    width: 12rem;
+  }
+  .product-card img {
+    width: 100%;
+    height: 130px;
+    
+  }
+  .whatsapp_float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 999;
+  }
+  .whatsapp-icon {
+    margin-top: 16px;
+  }
+  .haqqimizda-text {
+    height: 350px;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .contact-footer {
+    margin-left: 150px;
+  }
+  .logo-footer {
+    margin-left: 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
